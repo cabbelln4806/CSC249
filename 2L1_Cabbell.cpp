@@ -1,3 +1,9 @@
+// CSC 249
+// 2L.1 - Linear Search of Array
+// Nia Cabbel
+// 2/14//2025
+
+
 #include <iostream>
 using namespace std;
 
@@ -11,7 +17,7 @@ int LinearSearch(int* numbers, int numbersSize, int key) {
 }
 
 int main() {
-   int numbers[] = { 2, 4, 7, 10, 11, 32, 45, 87 };
+   int numbers[] = { 28, 400, 60, 90, 110, 687, 20, 100 };
    int numbersSize = sizeof(numbers) / sizeof(numbers[0]);
    cout << "NUMBERS: [" << numbers[0];
    for (int i = 1; i < numbersSize; i++) {
