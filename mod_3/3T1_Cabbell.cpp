@@ -15,6 +15,7 @@ int main() {
    numList.Append(nodeC);   // Add 44, make the tail
    numList.Append(nodeE);   // Add 42, make the tail
 
+   
    numList.Prepend(nodeA);  // Add 66, make the head
 
    numList.InsertAfter(nodeC, nodeD);  // Insert 95 after 44
