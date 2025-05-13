@@ -1,30 +1,16 @@
+// CSC 249
+// Nia Cabbell
+// 5/13//2025
+
 #include <iostream>
 using namespace std;
 
-int BinarySearch(int* numbers, int numbersSize, int key) {
-   // Variables to hold the low and high indices of the area being searched. 
-   // Starts with entire range.
-   int low = 0;
-   int high = numbersSize - 1;
-   
-   // Loop until "low" passes "high"
-   while (high >= low) {
-      // Calculate the middle index
-      int mid = (high + low) / 2;
-
-      // Cut the range to either the left or right half,
-      // unless numbers[mid] is the key
-      if (numbers[mid] < key) {
-         low = mid + 1;
-      }
-      else if (numbers[mid] > key) {
-         high = mid - 1;
-      }
-      else {
-         return mid;
+int LinearSearch(int* numbers, int numbersSize, int key) {
+   for (int i = 0; i < numbersSize; i++) {
+      if (numbers[i] == key) {
+         return i;
       }
    }
-   
    return -1; // not found
 }
 
@@ -41,8 +27,8 @@ int main() {
    cout << "Enter an integer value: ";
    int key = 0;
    cin >> key;
-      
-   int keyIndex = BinarySearch(numbers, numbersSize, key);
+
+   int keyIndex = LinearSearch(numbers, numbersSize, key);
    if (keyIndex == -1) {
       cout << key << " was not found." << endl;
    }
